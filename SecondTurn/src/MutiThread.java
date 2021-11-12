@@ -1,7 +1,7 @@
 public class MutiThread {
 
     public static void main(String[] args) {
-        int[] arr1 = {1, 3, 5, 7, 9};
+        int[] arr1 = {1, 3, 5, 7, 9,11,12,13,14};
         int[] arr2 = {2, 4, 6, 8, 10};
         Muti M1 = new Muti(arr1, arr2);
         C1 c1 = new C1(M1);
@@ -48,7 +48,7 @@ int [] arr2;
             this.notify();
             System.out.print(arr1[i]+" ");
             try {
-                this.wait();
+                this.wait(100);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
